@@ -1,0 +1,65 @@
+# Site Settings
+lang: en
+title: Bulma Clean Theme
+tagline: Bulma Clean Theme
+email: your-email@domain.com
+description: >
+  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+baseurl: ""
+permalink: pretty
+#favicon: /path/to/favicon.png
+gh_sponsor: #You can put a github name for sponsor
+#hide_share_buttons: true
+theme_color: '#eeeeee'
+#fixed_navbar: top
+#direction: one of <ltr, rtl, auto>, default: ltr
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Your Name"
+      layout: post
+      image: # You can put a default path image for posts
+      show_sidebar: true
+
+markdown: kramdown
+highlighter: rouge
+
+footer_menu: example_footer_menu
+
+collections:
+  products: 
+    output: true
+    layout: product
+    image: # You can put a default path image for products
+    show_sidebar: false

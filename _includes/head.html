@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content={{ site.theme_color | default: '#ffffff' }}>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link rel="shortcut icon" type="image/png" {% if site.favicon %} href="{{ site.favicon | relative_url }}" {% else %} href="{{ site.baseurl }}/favicon.png" {% endif %} />
+
+    <title>
+      {{ page.title }} | {{ site.title }}
+    </title>
+    
+    <meta name="author" content="Test Author">
+    
+    <meta property="og:locale" content="en_US">
+    
+    <meta name="description" content="The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites">
+    
+    <meta property="og:description" content="The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites">
+    
+    <meta property="og:site_name" content="Bulma Clean Theme">
+
+    {% if site.feed %}
+    {% feed_meta %}
+    {% endif %}
+</head>
